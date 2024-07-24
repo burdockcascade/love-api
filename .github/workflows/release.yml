@@ -21,8 +21,13 @@ jobs:
         run: lua scripts/generate-json.lua
       - name: Generate YAML
         run: lua scripts/generate-yaml.lua
-      - name: Upload artifact
+      - name: Upload JSON
         uses: actions/upload-artifact@v2
         with:
           name: json
           path: love-api.json
+      - name: Upload YAML
+        uses: actions/upload-artifact@v2
+        with:
+          name: yaml
+          path: love-api.yaml
