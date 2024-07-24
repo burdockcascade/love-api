@@ -16,4 +16,4 @@ jobs:
       - name: Install dkjson
         run: luarocks install dkjson
       - name: Generate JSON
-        run: lua scripts/generate.lua
+        run: lua scripts/generate-json.lua
