@@ -20,6 +20,8 @@ jobs:
       - name: Install dkjson
         run: luarocks install dkjson
       - name: Generate JSON
+        env:
+          SHA: ${{ github.sha }}
         run: lua scripts/generate-json.lua
       - name: Upload JSON
         uses: actions/upload-artifact@v4
