@@ -13,21 +13,18 @@ jobs:
         uses: leafo/gh-actions-lua@v10
       - name: Setup LuaRocks
         uses: leafo/gh-actions-luarocks@v4
+      - name: Install Busted
+        run: luarocks install busted
+      - name: Run Tests
+        run: busted specs
       - name: Install dkjson
         run: luarocks install dkjson
       - name: Install lyaml
         run: luarocks install lyaml
       - name: Generate JSON
         run: lua scripts/generate-json.lua
-      - name: Generate YAML
-        run: lua scripts/generate-yaml.lua
       - name: Upload JSON
         uses: actions/upload-artifact@v4
         with:
           name: json
           path: love-api.json
-      - name: Upload YAML
-        uses: actions/upload-artifact@v4
-        with:
-          name: yaml
-          path: love-api.yaml
