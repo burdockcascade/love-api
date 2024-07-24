@@ -4,7 +4,7 @@ return {
     version = '11.5',
     build = {
         date = os.date("!%Y-%m-%dT%H:%M:%SZ"),
-        sha = sha = os.getenv('SHA') or 'unknown',
+        sha = os.getenv('SHA') or 'unknown',
     },
     functions = {
         {
