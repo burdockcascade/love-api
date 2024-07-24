@@ -9,11 +9,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup LuaJIT
+      - name: Setup Lua
         uses: leafo/gh-actions-lua@v10
-      - name: Set up LuaRocks
+      - name: Setup LuaRocks
         uses: leafo/gh-actions-luarocks@v4
-      - name: Install dkjson
+      - name: Install rocks
         run: luarocks install dkjson
       - name: Generate JSON
         run: lua scripts/generate-json.lua
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: json
+          path: love-api.json
