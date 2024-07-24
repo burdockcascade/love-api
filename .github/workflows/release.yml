@@ -19,8 +19,6 @@ jobs:
         run: busted specs
       - name: Install dkjson
         run: luarocks install dkjson
-      - name: Install lyaml
-        run: luarocks install lyaml
       - name: Generate JSON
         run: lua scripts/generate-json.lua
       - name: Upload JSON
