@@ -2,7 +2,7 @@ local path = (...):match('(.-)[^%./]+$')
 
 return {
     version = '11.5',
-    build-date: os.date("!%Y-%m-%dT%H:%M:%SZ"),
+    build-date = os.date("!%Y-%m-%dT%H:%M:%SZ"),
     functions = {
         {
             name = 'getVersion',
