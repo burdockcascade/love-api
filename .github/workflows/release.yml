@@ -26,7 +26,3 @@ jobs:
         with:
           name: json
           path: love-api.json
-      - name: Release
-        uses: googleapis/release-please-action@v4
-        with:
-          release-type: simple
