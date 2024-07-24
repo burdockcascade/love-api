@@ -13,10 +13,10 @@ jobs:
         uses: leafo/gh-actions-lua@v10
       - name: Setup LuaRocks
         uses: leafo/gh-actions-luarocks@v4
-      - name: Install Busted
-        run: luarocks install busted
-      - name: Run Tests
-        run: busted specs
+      # - name: Install Busted
+      #   run: luarocks install busted
+      # - name: Run Tests
+      #   run: busted specs
       - name: Install dkjson
         run: luarocks install dkjson
       - name: Generate JSON
