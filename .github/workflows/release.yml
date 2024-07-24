@@ -14,9 +14,7 @@ jobs:
       - name: Setup LuaRocks
         uses: leafo/gh-actions-luarocks@v4
       - name: Install rocks
-        run: luarocks install dkjson lyaml
-      - name: Generate JSON
-        run: lua scripts/generate-json.lua
+        run: luarocks install lyaml
       - name: Generate YAML
         run: lua scripts/generate-yaml.lua
       - name: Upload artifact
